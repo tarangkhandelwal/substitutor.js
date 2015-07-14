@@ -2,9 +2,16 @@
 *Substitutor* is a simple to use String replacement Javascript library that facilitates using placeholders in strings literals 
 that are substituted with dynamic context value's passed at the runtime.
 
+###Features
+1. Supports Nested Place Holders.  Ex: {address.street.name}  
+2. Support for n-level Recursive PlaceHolders. 
+ <br>Ex: { { { { id } } } } . Here replacement will happen four times starting from innermost placeholder
+
+
 ### Examples
 ```javascript
-1.  nameJson= {
+1.  Basic JSObject
+nameJson= {
         "first":"John",
         "last":"Doe"
         }
@@ -16,7 +23,8 @@ var fullName = substitutor('My name is {first} {last} ', nameJson);
 
 
 ```javascript
-2.  userJson={
+2. Nested JSObject 
+userJson={
     "name": {
         "first": "John",
         "last": "Doe"
@@ -34,7 +42,8 @@ var fullName = substitutor(' {name.first} {name.last} : ( Work {phone.work} )', 
 
 
 ```javascript
-3.  populationData={
+3. Double PlaceHolders 
+populationData={
     "max":"India",
     "min":"Japan",
 	"India":"1.25 billion",
