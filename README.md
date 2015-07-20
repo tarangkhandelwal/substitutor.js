@@ -56,3 +56,22 @@ var output = substitutor('Max Population:{max} ({{max}}) & Min Population :{min}
 ```
 
 > Output: Max Population:India (1.25 billion) & Min Population :Japan (127.3 million)
+
+```javascript
+4.  Basic Array
+var arr=[404, 'Page Not Found'];
+var output = substitutor('Error Code {0} is {1}',arr);
+
+```
+
+> Output: Error Code 404 is Page Not Found
+
+
+```javascript
+5. Multi Dimensional Array 
+var arr=[["Engineer","John"],"abc University"]
+var output = substitutor(' {0.1} ,an {0.0} from {1}', arr);
+
+```
+
+> Output: John ,an Engineer from abc University
