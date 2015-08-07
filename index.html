@@ -1,0 +1,29 @@
+<html>
+<script src="substitutor.js"></script>
+<body>
+
+
+<div id="ans"></div>
+
+
+
+<script>
+
+populationData={
+    "max":"India",
+    "min":"Japan",
+	"India":"1.25 billion",
+	"USA":"318.9 million",
+	"Japan":"127.3 million"
+
+}
+
+var output = substitutor('Max Population:{0.max} ', {"max":"MAXIMUM"},"TARANG");
+
+//output=substitutor("Error Code {0} represents {1}","404","ETC")
+document.getElementById("ans").innerHTML=output;
+</script>
+
+</body>
+
+

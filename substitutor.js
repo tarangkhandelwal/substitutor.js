@@ -21,7 +21,7 @@ var substitutor = (function()
 {
      var regEx=/{([^{]*?)}/g;
                
-	 var checkForSubstitutors=function(str){
+     var checkForSubstitutors=function(str){
         return regEx.test(str);
     }
 
@@ -29,9 +29,7 @@ var substitutor = (function()
     {
         return function(regexMatch, placeholder)
         {
-            console.log(context,regexMatch,placeholder,"context,regexMatch,placeholder")
             var splitArray=placeholder.split(".")
-            console.log(splitArray)
             var currentContext=context;
             while(splitArray.length){
                     var item=splitArray.shift();
@@ -46,7 +44,7 @@ var substitutor = (function()
 
     return function(input, context)
     {
-			while(checkForSubstitutors(input)){
+            while(checkForSubstitutors(input)){
                input=input.replace(regEx, getSubstitueValue(context)); 
             }
         return input
