@@ -28,9 +28,16 @@ console.log(jsonElement)
 
 
 });
-
+//Attaching click handler to menu items for scroll 
+$("#aboutLink").off().on('click',function(){
+	smoothScroll.animateScroll( null, '#about');
+});
+$("#homeLink").off().on('click',function(){
+	smoothScroll.animateScroll( null, '#home');
+});
 // Code for shrinking header on scroll
 $(window).scroll(function(){
+
  var shrinkHeader = 70;
   $(window).scroll(function() {
     var scroll = getCurrentScroll();
