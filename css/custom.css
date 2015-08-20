@@ -110,15 +110,15 @@ border-color:#5cb85c;
     opacity: 0.8;
 }
 
-
+/*Css for shrinking header on scroll*/
 
 .header 
 {
 	font-size:20px;
     font-weight:normal;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .shrink 
@@ -137,5 +137,35 @@ height:50px;
 
 .shrink .navbar-nav>li>a{
 line-height : 20px;
+/*transition: all 0.3s;*/
+}
 
+/*Css for parallax*/
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+/*Css for Typed.js*/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.9s infinite;
+    -moz-animation: blink 0.9s infinite;
+    animation: blink 0.9s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

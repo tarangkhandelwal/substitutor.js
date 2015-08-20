@@ -46,3 +46,14 @@ function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
     }
 });
+
+$(function(){
+      $("#home").typed({
+        strings: ["Home Content : ^1000 Here we will display the content describing a bit about library. i.e How stuff Works.^2000"],
+        typeSpeed: 10,
+        showCursor : true,
+        cursorChar : "|",
+        loop : true
+
+      });
+  });
