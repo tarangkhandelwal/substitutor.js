@@ -54,6 +54,5 @@ $(function(){
         showCursor : true,
         cursorChar : "|",
         loop : true
-
       });
   });
