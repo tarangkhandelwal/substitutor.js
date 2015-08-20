@@ -61,6 +61,7 @@ border-color:#5cb85c;
 .logo-link img{
 	height:inherit;
 	width:auto;
+	transition: all 0.3s;
 }
 .navbar-nav>li>a{
 	line-height: 40px;
@@ -125,4 +126,34 @@ a[ id= "about" ]:target ~ .slide {
 a[ id= "contacto" ]:target ~ #main article.panel {
     -webkit-transform: translateY( -1000px );
     transform: translateY( -1000px );
+}
+
+
+.header 
+{
+	font-size:30px;
+    font-weight:normal;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.shrink 
+{
+    font-size : 20px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	height:30px;
+}
+
+.shrink .logo-link{
+height:50px;
+
+
+}
+
+.shrink .navbar-nav>li>a{
+line-height : 20px;
+
 }
