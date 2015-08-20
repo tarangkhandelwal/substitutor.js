@@ -110,23 +110,6 @@ border-color:#5cb85c;
     opacity: 0.8;
 }
 
-/*
- *Scrolling
- */
-
-a[ id= "home" ]:target ~ .slide  {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
-}
-
-a[ id= "about" ]:target ~ .slide {
-    -webkit-transform: translateY( -600px );
-    transform: translateY( -600px );
-}
-a[ id= "contacto" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
-}
 
 
 .header 
