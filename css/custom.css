@@ -11,7 +11,7 @@ background-color: #D2DAE2;
 }
 
 .form-control{
-	border-width:2px;
+  border-width:2px;
 }
 body{
 font-family: 'Didact Gothic', sans-serif;
@@ -29,7 +29,7 @@ font-size: 28px;
 }
 
 .btn{
-	border-radius: 0px;
+  border-radius: 0px;
 }
 
 #result{
@@ -46,54 +46,63 @@ border-color:#5cb85c;
 }
 
 #substitutorBtn{
-	font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .navbar{
-	border:0;
+  border:0;
 }
 .navbar-header{
-	height:70px;
+  height:70px;
 }
 .logo-link{
-	height: inherit;
+  height: inherit;
 }
 .logo-link img{
-	height:inherit;
-	width:auto;
-	transition: all 0.3s;
+  height:inherit;
+  width:auto;
+  transition: all 0.3s;
+  -webkit-transition:all 0.3s;
+  -moz-transition:   all 0.3s;
+  -o-transition:     all 0.3s;
+  
 }
 .navbar-nav>li>a{
-	line-height: 40px;
+  line-height: 40px;
+  transition: line-height 0.15s ease-in-out;
+  -webkit-transition: line-height 0.15s ease-in-out;
+  -moz-transition:   line-height 0.15s ease-in-out;
+  -o-transition:     line-height 0.15s ease-in-out;
+ 
 }
 .navbar-default{
-	background-color: transparent;
+  background-color: transparent;
 }
 .navigation{
-	background-color:#00A9E4;
+  background-color:#00A9E4;
 }
 
 #rawString{
-	height:280px;
+  height:280px;
 }
 
 #jsonToSubstitute{
-	height: 280px;
+  height: 280px;
 }
 #home{
-	padding-top:80px;
+  padding-top:80px;
 }
 .slide{
-	 -webkit-transition: -webkit-transform 0.6s ease-in-out;
+   -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
 }
 
 .clear{
-	clear: both;
+  clear: both;
 }
 
 .fork-icon{
-	position: fixed;
+  position: fixed;
     top: -42px;
     right: 40px;
     border: 0;
@@ -101,7 +110,7 @@ border-color:#5cb85c;
     z-index: 9999;
 }
 .navbar-default .navbar-nav>li>a{
-	color:#fff;
+  color:#fff;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -114,7 +123,7 @@ border-color:#5cb85c;
 
 .header 
 {
-	font-size:20px;
+  font-size:20px;
     font-weight:normal;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -126,7 +135,7 @@ border-color:#5cb85c;
      -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-	height:30px;
+  height:30px;
 }
 
 .shrink .logo-link{
@@ -168,4 +177,14 @@ line-height : 20px;
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+
+
+
+@media (min-width: 768px)
+{
+  .nav  {
+    padding-right: 40px;
+}
 }
