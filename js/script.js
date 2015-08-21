@@ -28,17 +28,11 @@ console.log(jsonElement)
 
 
 });
-//Attaching click handler to menu items for scroll 
-$("#aboutLink").off().on('click',function(){
-	smoothScroll.animateScroll( null, '#about');
-});
-$("#homeLink").off().on('click',function(){
-	smoothScroll.animateScroll( null, '#home');
-});
+
 // Code for shrinking header on scroll
 $(window).scroll(function(){
 
- var shrinkHeader = 70;
+ var shrinkHeader =70;
   $(window).scroll(function() {
     var scroll = getCurrentScroll();
       if ( scroll >= shrinkHeader ) {
@@ -52,3 +46,13 @@ function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
     }
 });
+
+$(function(){
+      $("#home").typed({
+        strings: ["Home Content : ^1000 Here we will display the content describing a bit about library. i.e How stuff Works.^2000"],
+        typeSpeed: 10,
+        showCursor : true,
+        cursorChar : "|",
+        loop : true
+      });
+  });

@@ -43,20 +43,28 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse ">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active" id="homeLink"><a data-scroll data-options='{ "easing": "easeOutQuad" }' href="#home">Home</a></li>
-            <li id="aboutLink"><a data-scroll data-options='{ "easing": "easeOutQuad" }' href="#about">About</a></li>
-            <li id="demoLink"><a data-scroll data-options='{ "easing": "easeOutQuad" }' href="#demo">Demo</a></li> 
+            <li class="active" id="homeLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#home">Home</a></li>
+            <li id="aboutLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#about">About</a></li>
+            <li id="demoLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#demo">Demo</a></li> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
 
-    </nav>
+    </n`av>
 
 </div>
 
+<div class="container slide parallax-window" data-parallax="scroll" data-image-src="images/demo1.jpg" id="home" >
+    
+</div>
+
+<div class="container slide parallax-window" data-parallax="scroll" data-image-src="images/demo2.jpg" id="about" style="color : white">
+  Demo Content : 
+  Wait for the Magic Here
+</div>
 
 
-<div class="container main-content slide" id="home">
+<div class="container main-content slide" id="demo">
 
       <div class="row">
         <div class="col-md-4">
@@ -85,13 +93,9 @@
 </div>
 
 
-<div class="container slide" id="about" style="height:600px">
-About Content
-</div>
 
-<div class="container slide" id="demo" style="height:600px">
-Demo Content
-</div>
+
+
 
 
     <!-- Carousel
@@ -143,7 +147,7 @@ Demo Content
         <span class="sr-only">Next</span>
       </a>
     </div> --><!-- /.carousel -->
-
+<!-- Libraries  -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -151,9 +155,15 @@ Demo Content
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script src="js/substitutor.js"></script>
     <script src="js/smooth-scroll.js"></script>
-	<script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/typed.js"></script>
+	 <!-- Javascript utility -->
+   <script src="js/script.js"></script>
 	<script>
-		smoothScroll.init();
+		smoothScroll.init({
+      speed : 400,
+      offset : 1
+    });
 	</script>
 	
   </body>
