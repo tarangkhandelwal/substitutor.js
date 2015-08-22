@@ -2,6 +2,36 @@ body{
 background-color: #D2DAE2;
 }
 
+html,body{height:100%;}
+
+#main-view{
+  height:100%;
+  width: 100%;
+  background-color: #00A9E4;
+}
+
+.headingText{
+  color:#fff;
+  font-size: 50px;
+
+}
+
+.headingSubText{
+  color:#fff;
+  opacity: 0;
+  transition:opacity 2s  ease-in-out;
+   -webkit-transition:opacity 2s  ease-in-out;
+  -moz-transition:  opacity 2s  ease-in-out;
+  -o-transition:opacity 2s  ease-in-out;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .main-content textarea { resize: none; 
   padding: 10px;
   border: solid 5px #c9c9c9;
@@ -121,14 +151,16 @@ overflow-y:auto;
 {
   font-size:20px;
     font-weight:normal;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+   transition:opacity 2s  ease-in-out;
+   -webkit-transition:opacity 2s  ease-in-out;
+  -moz-transition:  opacity 2s  ease-in-out;
+  -o-transition:opacity 2s  ease-in-out;
+    opacity: 0.4;
 }
 
 .shrink 
 {
-     -webkit-transition: all 0.3s;
+ l    -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   height:30px;
@@ -158,6 +190,9 @@ line-height : 20px;
     -webkit-animation: blink 0.9s infinite;
     -moz-animation: blink 0.9s infinite;
     animation: blink 0.9s infinite;
+    color:#fff;
+    font-weight: bold;
+    font-size: 50px;
 }
 @keyframes blink{
     0% { opacity:1; }

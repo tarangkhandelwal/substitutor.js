@@ -27,11 +27,14 @@ function getCurrentScroll() {
 });
 
 $(function(){
-      $("#home").typed({
-        strings: ["Home Content : ^1000 Here we will display the content describing a bit about library. i.e How stuff Works.^2000"],
-        typeSpeed: 10,
-        showCursor : true,
-        cursorChar : "|",
-        loop : true
-      });
+      $(".headingText").typed({
+          strings: ["", " ^1000 Define, ^1000 Substitute ^1500 and Create. "],
+          typeSpeed: 20,
+          backDelay: 500,
+          callback: function() {
+            $(".headingSubText").css("opacity","1");
+            $(".header").css("opacity","1");
+          },
+
+    });
   });
