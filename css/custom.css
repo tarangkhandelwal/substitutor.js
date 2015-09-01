@@ -10,7 +10,7 @@ background-color: #D2DAE2;
   font-weight: bold;
 }
 
-.form-control{
+#demo .form-control{
   border-width:2px;
 }
 body{
@@ -29,24 +29,29 @@ font-size: 28px;
 }
 
 .btn{
-  border-radius: 0px;
+  border-radius: 15px;
 }
 
 #result{
-height:605px;
-border: solid 5px #c9c9c9;
+min-height : 150px;
+border : solid 5px #c9c9c9;
   transition: border 0.3s ;
   font-size: 0.9em;
-word-wrap:break-word;
-overflow-y:auto;   
+word-wrap : break-word;
+overflow-y : auto;   
 }
 
 .has-success .form-control{
-border-color:#5cb85c;
+border-color:#00A9E4;
 }
 
 #substitutorBtn{
   font-size: 0.8em;
+    border-color: #00a9e4;
+    background-color: transparent;
+  width: 50%;
+    margin: auto;
+    max-width: 300px;
 }
 
 .navbar{
@@ -188,3 +193,41 @@ line-height : 20px;
     padding-right: 40px;
 }
 }
+
+
+.btn-substitutor{
+  
+  padding-top: 30px;
+}
+
+.btn: hover{
+background-color: #00a9e4 !important;
+opacity: 0.2;
+}
+ 
+ .btn : active{
+  border-radius: 15px;
+  border : 0px;
+ }
+
+ .container{
+  width : 100%;
+ }
+ .footer{
+  background-color: #144D76;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;   
+ }
+ .contact-form{
+color: #c4d8ed;
+
+ }
+ 
+ #demo{
+      padding: 30px 0px;
+ }
+ 
+ .width-100{
+  width : 100%;
+ }
+

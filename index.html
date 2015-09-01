@@ -12,7 +12,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+ 
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,31 +70,32 @@
 <div class="container main-content slide" id="demo">
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
         <label for="rawString" class="col-sm-2 control-label">String</label>
         <textarea class="form-control" rows="8" id="rawString" draggable="false"></textarea>
-
-        <div>
-        <label for="jsonToSubstitute" class="col-sm-2 control-label">JSON</label>
-        <textarea class="form-control" rows="8" id="jsonToSubstitute" draggable="false"></textarea>
+      </div>
+        <div class="col-md-6">
+         <label for="jsonToSubstitute" class="col-sm-2 control-label">JSON</label>
+          <textarea class="form-control" rows="8" id="jsonToSubstitute" draggable="false"></textarea>
+      </div>
       </div>
 
-        </div><!-- /.col-md-4 -->
-     
-        <div class="col-md-4">
-         <button type="button" class="btn btn-block btn-success pad-medium" id="substitutorBtn">Substitute</button>
+        <!-- /.col-md-4 -->
+     <div class="row ">
+        <div class="col-md-12 btn-substitutor">
+         <button type="button" class="btn btn-block pad-medium " id="substitutorBtn">Substitute</button>
         
         </div><!-- /.col-md-4 -->
-     
-        <div class="col-md-4">
-  <div><label>Result</label></div>
-         <code class="form-control" rows="20" id="result" draggable="false"></code>
+     </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div><label>Result</label></div>
+            <code class="form-control" rows="20" id="result" draggable="false"></code>
           
         </div><!-- /.col-md-4 -->
       </div><!-- /.row -->
 
 </div>
-
 
 
 
@@ -162,7 +166,7 @@
 	<script>
 		smoothScroll.init({
       speed : 400,
-      offset : 1
+      offset : -10
     });
 	</script>
 	
