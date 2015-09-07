@@ -286,8 +286,8 @@ padding-top:100px;
 .facebook span {
   background-color: #3B5998;
 }
-.google-plus span {
-  background-color: #db5a3c;
+.skype span {
+  background-color: #009EE5;
 }
 
 /* Icons */
@@ -307,18 +307,18 @@ text-decoration: none;
   width: 3.6rem;
   z-index: 10;
 }
-.icon-button .icon-twitter {
+.icon-button .fa-twitter {
   color: #4099ff;
 }
-.icon-button .icon-facebook {
+.icon-button .fa-facebook {
   color: #3B5998;
 }
-.icon-button .icon-google-plus {
-  color: #db5a3c;
+.icon-button .fa-skype {
+  color: #009EE5;
 }
-.icon-button:hover .icon-twitter,
-.icon-button:hover .icon-facebook,
-.icon-button:hover .icon-google-plus {
+.icon-button:hover .fa-twitter,
+.icon-button:hover .fa-facebook,
+.icon-button:hover .fa-skype {
   color: white;
 }
 footer {
