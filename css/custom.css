@@ -1,5 +1,5 @@
 body{
-background-color: #D2DAE2;
+background-color: #fff;
 }
 
 html,body{height:100%;}
@@ -25,6 +25,12 @@ html,body{height:100%;}
   -o-transition:opacity 2s  ease-in-out;
 }
 
+.text-center{
+  text-align: center;
+}
+.bold{
+  font-weight: bold;
+}
 .vertical-center {
   position: relative;
   top: 50%;
@@ -36,7 +42,7 @@ html,body{height:100%;}
   padding: 10px;
   border: solid 5px #c9c9c9;
   transition: border 0.3s ;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
@@ -63,7 +69,7 @@ font-size: 28px;
 }
 
 #result{
-height:605px;
+height:485px;
 border: solid 5px #c9c9c9;
   transition: border 0.3s ;
   font-size: 0.9em;
@@ -109,11 +115,11 @@ overflow-y:auto;
 }
 
 #rawString{
-  height:280px;
+  height:220px;
 }
 
 #jsonToSubstitute{
-  height: 280px;
+  height: 220px;
 }
 #home{
   padding-top:80px;
@@ -218,6 +224,15 @@ line-height : 20px;
   .nav  {
     padding-right: 40px;
 }
+
+#about,#docs{
+padding-top:100px;
+}
+
+#demo{
+  padding-top: 80px;
+}
+
 }
 
 
@@ -308,9 +323,85 @@ text-decoration: none;
 }
 footer {
   font-size: 20px;
+  height:calc(100% - 38px);
+  width: 100%;
+  background-color: #ccc;
 }
 footer > div {
-  background-color: #ccc;
   padding: 20px;
   text-align: center;
+}
+.getInTouch{
+  padding:20px 0; 
+}
+.email{
+  padding: 0 0 10px 0;
+}
+#copyright{
+  position:relative;
+  bottom:0;
+ font-size: 20px;
+ text-align: center;
+
+}
+.font24{
+  font-size:24px;
+}
+
+.font20{
+  font-size:20px;
+}
+.pb20{
+  padding-bottom:20px;
+}
+.mt10{
+  margin-top: 10px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.btn-reverse{
+      background: none;
+    border: 2px solid #00A9E4;
+    color: #00A9E4;
+    padding: 8px 30px;
+        -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    font-weight: bold;
+        border-radius: 4px;
+}
+.btn-reverse:hover{
+    background: #00A9E4;
+    border: 2px solid #00A9E4;
+l3    color: #fff;
+}
+
+#docs p{
+  font-size:16px;
+}
+
+#demo,#about{
+  height: 100%;
+}
+
+.info{
+  font-size: 16px;
+}
+/*Documentation CSS*/
+.docBlock{
+}
+.docBlock pre{
+     padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-break: normal;
+    white-space: pre;
+    background-color: transparent;
+    border: 0;
+
+}
+.codeOutputError{
+  color:#2f6f9f;
 }

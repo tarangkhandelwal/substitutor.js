@@ -2,8 +2,13 @@
 $("#substitutorBtn").click(function(){
     var rawString=$("#rawString").val();
     var jsonString=$("#jsonToSubstitute").val();    
-    var result=substitutor(rawString, (new Function('return ' + jsonString))());
- $("#result").html(result);
+    
+    try{
+      var result=substitutor(rawString, (new Function('return ' + jsonString))());
+    }catch(ex){
+      result="Invalid Json Input."
+    }
+    $("#result").html(result);
 
 });
 

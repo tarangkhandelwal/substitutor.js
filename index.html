@@ -11,8 +11,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
-    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+
 
     <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,13 +42,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo-link" href="http://tarangkhandelwal.github.io/substitutor.js/"><img src="images/logo.png"></a>
+          <a class="logo-link" data-scroll data-options='{ "easing": "Linear" }' href="#main-view"><img src="images/logo.png"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse ">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active" id="homeLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#main-view">Home</a></li>
-            <li id="aboutLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#about">About</a></li>
-            <li id="demoLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#demo">Demo</a></li> 
+            <li id="homeLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#about">About</a></li>
+            <li id="demoLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#demo">Try</a></li> 
+            <li id="aboutLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#docs">Docs</a></li>
+            <li id="contactLink"><a data-scroll data-options='{ "easing": "Linear" }' href="#contact">Contact</a></li> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,7 +58,7 @@
 
 </div>
 
-
+<!-- Main View Block start -->
 <div class="container-fluid slide" id="main-view" >
     <div class="container  vertical-center">
         
@@ -74,24 +76,42 @@
         </div>
     </div>
 </div>
+<!-- End of Main View block -->
 
+<!-- About block start -->
+<div class="container slide " id="about" >
+ 
+      <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 font24">
+                <h2 class="bold text-center pb20 mt10 mb20">About Substitutor</h2>
+                <p>Substitutor is a easy to use string replacement Javascript library that allows to substitute placeholders of form {name} in string templates with dynamic value's passed at the runtime.</p>
+                <p>You can replace the placeholders with static values or create values "on-the-fly" by calling a generator. An object is provided as the hashtable to lookup when doing these substitutions. The expression in the curly braces may be a simple property, like id or a dotted expression like data.employee.id.</p>
+                <p>
+                The string template is written as a regular string with {} expression in the place where a substitution is required. {} expression references a  a member of an Object structure or a position in an Array.</p>
+            </div>
+        </div>
 
-<div class="container slide parallax-window" data-parallax="scroll" data-image-src="images/demo2.jpg" id="about" style="color : white">
-  Demo Content : 
-  Wait for the Magic Here
+        <div class="feature-lead text-center">
+                    <h4 class="font20">Want to see it working?</h4>
+                    <p><a data-scroll data-options='{ "easing": "Linear" }' href="#demo" class="btn btn-reverse" >Try Now</a></p>
+                </div>
 </div>
+<!-- End of About block -->
+
 
 
 <div class="container main-content slide" id="demo">
 
       <div class="row">
         <div class="col-md-4">
-        <label for="rawString" class="col-sm-2 control-label">String</label>
-        <textarea class="form-control" rows="8" id="rawString" draggable="false"></textarea>
+        <label for="rawString" class=" control-label">String</label>
+        <span class="info">-enter your placeholder string here.</span>
+        <textarea class="form-control" rows="8" id="rawString" draggable="false" placeholder="{placeholder}"></textarea>
 
         <div>
-        <label for="jsonToSubstitute" class="col-sm-2 control-label">JSON</label>
-        <textarea class="form-control" rows="8" id="jsonToSubstitute" draggable="false"></textarea>
+        <label for="jsonToSubstitute" class="control-label">JSON</label>
+         <span class="info">-enter your JSON  here.</span>
+        <textarea class="form-control" rows="8" id="jsonToSubstitute" draggable="false" placeholder='{"placeholder":"Value"}'></textarea>
       </div>
 
         </div><!-- /.col-md-4 -->
@@ -102,8 +122,10 @@
         </div><!-- /.col-md-4 -->
      
         <div class="col-md-4">
-  <div><label>Result</label></div>
-         <code class="form-control" rows="20" id="result" draggable="false"></code>
+  <div><label>Result</label>
+   <span class="info">-get your outputs here!!!</span>
+ </div>
+         <code class="form-control" rows="20" id="result" draggable="false" placeholder="SSS"></code>
           
         </div><!-- /.col-md-4 -->
       </div><!-- /.row -->
@@ -111,14 +133,179 @@
 </div>
 
 
+<!-- Main Docs block start -->
+<div class="container slide" id="docs" >
+        <div class="row">
+            <div class="col-lg-12  ">
+              <h2 class="bold text-center pb20 mt10 mb20">Documentation</h2>
+                
+              <div class="bs-docs-section">
+                  <p>The Substitutor library can be used a number of ways.</p>
+          
+          <!-- Start of doc block -->
+          <div class="docBlock">
+          <h2 >with Array</h2>
+          <p>-substitutes expressions in a string with values from an Array.</p>
 
-    <footer>
-      <div class="container-fluid">
+          <div class="highlight col-md-8">
+            <pre>
+  var myArray=['404', 'Page Not Found']; 
+  var output = substitutor('Error Code {0} is for {1}', myArray); 
+  Output: <span class="codeOutputError"> Code 404 is for Page Not Found</span>
+          </pre>
+
+          </div>
+          <div class="clear"></div>
+        </div>
+              <!-- End of doc block -->
+
+          <!-- Start of doc block -->
+         <div class="docBlock">
+          <h2 >with Object</h2>
+          <p>- substitutes expressions in a string with values from a JSON Object.</p>
+
+          <div class="highlight col-md-8">
+            <pre>
+  var myObj={
+  state”:”Karnataka”,
+  “capital”:”Bangalore”
+  };
+  var output = substitutor('The Capital of {state} is {capital}', myObj);
+
+  Output: <span class="codeOutputError"> The Capital of Karnataka is Bangalore</span>
+
+          </pre>
+
+          </div>
+
+
+
+          <div class="highlight col-md-8">
+            <pre>
+ var person = {
+        "first": "Elon",
+        "last": "Musk",
+        "title": "Entrepreneur"
+    };
+var template = substitutor("{first} {last} is a great {title}.");
+
+
+  Output: <span class="codeOutputError">Elon Musk is a great Entrepreneur.</span>
+
+          </pre>
+
+          </div>
+             <div class="clear"></div>
+        </div>
+              <!-- End of doc block -->
+
+
+
+          <!-- Start of doc block -->
+          <div class="docBlock">
+          <h2 >with Nested Object </h2>
+          <p>-substitutes expressions in a string with values from an nested objects.</p>
+
+          <div class="highlight col-md-8">
+            <pre>
+userJson={
+    "name": {
+        "first": "John",
+        "last": "Doe"
+    },
+    "phone": {
+        "work": "1234567",
+        "home": "4444444"
+    }
+}
+var template = substitutor(' {name.first} {name.last} can be 
+reached at {phone.work} while he’s at work', userJson);
+
+Output: <span class="codeOutputError">John Doe can be reached at 1234567 while he’s at work.</span>
+          </pre>
+
+          </div>
+          <div class="clear"></div>
+        </div>
+              <!-- End of doc block -->
+
+
+
+          
+          <!-- Start of doc block -->
+          <div class="docBlock">
+          <h2 >with Nested Placeholders</h2>
+          <p>-replace nested placeholders recursively starting from innermost placeholder.</p>
+
+          <div class="highlight col-md-8">
+            <pre>
+populationData={
+    "max":"India",
+    "min":"Japan",
+    "India":"1.25 billion",
+    "USA":"318.9 million",
+    "Japan":"127.3 million"
+
+}
+
+var output = substitutor('Max Population:{max} ({{max}}) & 
+Min Population :{min} ({{min}})', populationData);
+
+Output: <span class="codeOutputError"> Max Population:India (1.25 billion) & Min Population :Japan (127.3 million)</span>
+          </pre>
+
+          </div>
+          <div class="clear"></div>
+        </div>
+              <!-- End of doc block -->
+          
+          <!-- Start of doc block -->
+          <div class="docBlock">
+          <h2 >with Function</h2>
+          <p>-replace a placeholder with a response from function.</p>
+
+          <div class="highlight col-md-8">
+            <pre>
+ var sampleJson={
+“time”: new Date()
+}
+var template = substitutor('The time now is {time}',sampleJson);
+  Output: <span class="codeOutputError">  The time now is Sat Aug 01 2015 12:00:00 GMT+0530</span>
+          </pre>
+
+          </div>
+          <div class="clear"></div>
+        </div>
+              <!-- End of doc block -->
+
+              </div>
+            </div>
+        </div>
+
+</div>
+<!-- End of Docs Main bloc -->
+
+
+
+
+    <footer id="contact">
+      <div class="container-fluid vertical-center">
+        <h2 class="getInTouch" id="getInTouch">Get in touch!</h2>
+        <p class="email"><a href="mailto:tarangkhandelwal@gmail.com">tarangkhandelwal@gmail.com</a></p>
       <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
       <a href="http://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
       <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+      
+
+                  
+      
       </div>
+
+                
     </footer>
+      <div class="col-sm-12 center">
+                        <p id="copyright">© Copyright 2015 - Substitutor.js</p>
+         </div>
 
 
 
